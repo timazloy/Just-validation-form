@@ -7,26 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Just a validation form</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
-<div class="page__object-empty objects-personal">
-    <div class="objects-personal__top order-section">
-        <div class="order-section__column">
-            <div class="order-section__title title-main">Оформление заказа</div>
-            <form action="#" id="order-payment-form" class="order-form">
-                <div class="order-form__item">
-                    <img class="main-img" src="./images/object_logo.png" alt="image">
-                    <div class="order-section__item object-form">
-                        <div class="order-form__title">
-                            <img class="main-img main-img--mobile" src="./images/object_logo.png" alt="image">
-                            <div class="order-form__title-cover">
-                                <span class="title-main title-main--middle">Объект</span>
-                                <p class="title-main__text">ID<span class="title-main__span">12345678</span></p>
+<div class="page__form wrapper">
+        <div class="wrapper__column">
+            <div class="wrapper__title title">Оформление заказа</div>
+            <form action="#" id="order-payment-form" class="wrapper__form order-form">
+                <div class="order-form__item form-block">
+                    <img class="form-block__img img" src="./images/object_logo.png" alt="image">
+                    <div class="form-block__inputs inputs-block">
+                        <div class="inputs-block__title">
+                            <img class="img img--mobile" src="./images/object_logo.png" alt="image">
+                            <div class="inputs-block__title-cover">
+                                <span class="title title--middle">Объект</span>
+                                <p class="title__text">ID<span class="title__span">12345678</span></p>
                             </div>
                         </div>
-                        <div class="object-form__item object-input">
+                        <div class="inputs-block__item custom-imput">
                             <div class="custom-select js-custom-select">
                                 <input class="custom-select__value" value="" type="text">
                                 <div class="custom-select__header">
@@ -46,59 +48,59 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="object-form__item object-input">
-                            <div class="object-input__title">Адрес</div>
+                        <div class="inputs-block__item custom-imput">
+                            <div class="custom-imput__title">Адрес</div>
                             <textarea class="custom-textarea"></textarea>
                         </div>
-                        <div class="object-form__item object-checkbox js-checkbox-input">
+                        <div class="inputs-block__item object-checkbox js-checkbox-input">
                             <input type="checkbox" class="custom-checkbox js-open-checkbox" id="restrictions-checkbox" value="restrictions">
                             <label for="restrictions-checkbox">
                                 <span class="object-checkbox__text main-text"> Есть ограничения</span>
                             </label>
                             <input disabled class="object-checkbox__input js-object-checkbox" type="text">
                         </div>
-                        <div class="object-form__wrapper">
-                            <div class="object-form__item object-input">
-                                <div class="object-input__title">Подъезд</div>
+                        <div class="inputs-block__wrapper">
+                            <div class="form-block__item custom-imput">
+                                <div class="custom-imput__title">Подъезд</div>
                                 <input type="text" class="custom-input">
                             </div>
-                            <div class="object-form__item object-input">
-                                <div class="object-input__title">Этаж</div>
+                            <div class="form-block__item custom-imput">
+                                <div class="custom-imput__title">Этаж</div>
                                 <input type="text" class="custom-input">
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="order-form__item">
-                    <img class="main-img" src="./images/phone.png" alt="image">
-                    <div class="order-section__item object-form">
-                        <div class="order-form__title">
-                            <img class="main-img  main-img--mobile" src="./images/phone.png" alt="image">
-                            <span class="title-main title-main--middle">Контактное лицо</span>
+                <div class="order-form__item form-block">
+                    <img class="form-block__img img" src="./images/phone.png" alt="image">
+                    <div class="form-block__inputs inputs-block">
+                        <div class="inputs-block__title">
+                            <img class="img  img--mobile" src="./images/phone.png" alt="image">
+                            <span class="title title--middle">Контактное лицо</span>
                         </div>
-                        <div class="object-form__item object-input">
-                            <div class="object-input__title">Имя</div>
-                            <div class="object-input__cover">
+                        <div class="inputs-block__item custom-imput">
+                            <div class="custom-imput__title">Имя</div>
+                            <div class="custom-imput__cover">
                                 <input type="text" class="custom-input">
                             </div>
 
                         </div>
-                        <div class="object-form__item object-input">
-                            <div class="object-input__title">Номер телефона</div>
+                        <div class="inputs-block__item custom-imput">
+                            <div class="custom-imput__title">Номер телефона</div>
                             <input type="text" class="js-phone-number js-input-phone custom-input">
                         </div>
-                        <div class="object-form__item object-input">
-                            <div class="object-input__title">Комментарий к заказу</div>
+                        <div class="inputs-block__item custom-imput">
+                            <div class="custom-imput__title">Комментарий к заказу</div>
                             <textarea class="custom-textarea"></textarea>
                         </div>
                     </div>
                 </div>
-                <div class="order-form__item">
-                    <img class="main-img" src="./images/extra.png" alt="image">
+                <div class="order-form__item form-block">
+                    <img class="form-block__img img" src="./images/extra.png" alt="image">
                     <div class="order-section__item object-form">
                         <div class="order-form__title">
-                            <img class="main-img  main-img--mobile" src="./images/extra.png" alt="image">
-                            <span class="title-main title-main--middle">Дополнительные услуги</span>
+                            <img class="img  img--mobile" src="./images/extra.png" alt="image">
+                            <span class="title title--middle">Дополнительные услуги</span>
                         </div>
                         <div class="section-checkbox">
                             <input type="checkbox" class="custom-checkbox" id="extra-option-1" value="lift">
@@ -116,13 +118,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="order-form__item order-form__item--mobile">
+                <div class="order-form__item form-block order-form__item--mobile">
                     <div class="radio-section">
-                        <img class="main-img" src="./images/delivery_logo.png" alt="image">
+                        <img class="radio-section__img img" src="./images/delivery_logo.png" alt="image">
                         <div class="order-section__item object-form">
                             <div class="order-form__title">
-                                <img class="main-img  main-img--mobile" src="./images/delivery_logo.png" alt="image">
-                                <span class="title-main title-main--middle">Доставка</span>
+                                <img class="img  img--mobile" src="./images/delivery_logo.png" alt="image">
+                                <span class="title title--middle">Доставка</span>
                             </div>
                             <div class="checkbox-wrapper">
                                 <label class="checkbox-wrapper__label">
@@ -135,16 +137,15 @@
                                     <input type="radio" class="modern-radio" name="delivery" value="pickup">
                                     <span></span>
                                 </label>
-                                <textarea class="custom-textarea custom-textarea--high"></textarea>
                             </div>
                         </div>
                     </div>
                     <div class="radio-section">
-                        <img class="main-img" src="./images/payment.png" alt="image">
+                        <img class="radio-section__img img" src="./images/payment.png" alt="image">
                         <div class="order-section__item object-form">
                             <div class="order-form__title">
-                                <img class="main-img  main-img--mobile" src="./images/payment.png" alt="image">
-                                <span class="title-main title-main--middle">Способ оплаты</span>
+                                <img class="img  img--mobile" src="./images/payment.png" alt="image">
+                                <span class="title title--middle">Способ оплаты</span>
                             </div>
                             <div class="checkbox-wrapper">
                                 <label class="checkbox-wrapper__label">
@@ -162,44 +163,43 @@
                                     <input type="radio" class="modern-radio" name="payment" value="cash">
                                     <span></span>
                                 </label>
-                                <textarea class="custom-textarea custom-textarea--high"></textarea>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div id="scroll-form" class="order-form__item">
-                    <img class="main-img" src="./images/buyer.png" alt="image">
-                    <div class="order-section__item object-form">
-                        <div class="order-form__title">
-                            <img class="main-img  main-img--mobile" src="./images/payment.png" alt="image">
-                            <span class="title-main title-main--middle">Покупатель</span>
+                <div id="scroll-form" class="order-form__item form-block">
+                    <img class="form-block__img img" src="./images/buyer.png" alt="image">
+                    <div class="form-block__inputs inputs-block">
+                        <div class="inputs-block__title">
+                            <img class="img  img--mobile" src="./images/payment.png" alt="image">
+                            <span class="title title--middle">Покупатель</span>
                         </div>
-                        <div class="object-form__item object-input js-validation-input">
-                            <div class="object-input__title">
+                        <div class="inputs-block__item custom-imput js-validation-input">
+                            <div class="custom-imput__title">
                                 <span>ФИО</span>
-                                <span class="object-input__span star">*</span>
+                                <span class="custom-imput__span star">*</span>
                             </div>
-                            <div class="object-input__cover">
+                            <div class="custom-imput__cover">
                                 <input type="text" class="custom-input js-check-empty">
                                 <div class="error-text">Поле «ФИО» обязательно для заполнения</div>
                             </div>
                         </div>
-                        <div class="object-form__item object-input js-validation-input">
-                            <div class="object-input__title">
+                        <div class="inputs-block__item custom-imput js-validation-input">
+                            <div class="custom-imput__title">
                                 <span>E-mail</span>
-                                <span class="object-input__span star">*</span>
+                                <span class="custom-imput__span star">*</span>
                             </div>
                             <input type="email" class="custom-input js-check-empty">
                             <div class="error-text">Поле «E-mail» обязательно для заполнения</div>
                             <div class="error-text js-error-email">Введите корректный «E-mail»</div>
                         </div>
-                        <div class="object-form__item object-input">
+                        <div class="inputs-block__item custom-imput">
 
-                            <div class="object-input__title">
+                            <div class="custom-imput__title">
                                 <span>Номер телефона</span>
-                                <span class="object-input__span star">*</span>
+                                <span class="custom-imput__span star">*</span>
                             </div>
-                            <div class="object-input--flex js-validation-input">
+                            <div class="custom-imput--flex js-validation-input">
                                 <div class="object-form__cover">
                                     <input type="text" class="custom-input custom-input--small js-input-phone js-check-empty">
                                     <input type="checkbox" class="custom-checkbox" id="operator-call" value="operator-call">
@@ -212,8 +212,8 @@
                             </div>
 
                         </div>
-                        <div class="object-form__item object-input">
-                            <div class="object-input__title">Комментарий к заказу</div>
+                        <div class="inputs-block__item custom-imput">
+                            <div class="custom-imput__title">Комментарий к заказу</div>
                             <textarea class="custom-textarea"></textarea>
                         </div>
                     </div>
@@ -229,12 +229,9 @@
                 <button form="order-payment-form" type="submit" class="payment-section__submit button-main button-main--white">Сохранить заказ</button>
             </div>
         </div>
-        <div class="order-section__column order-section__column--small">
+        <div class="wrapper__column wrapper__column--small">
             <div class="payment-section">
-                <div class=" payment-section__title payment-section__title--mobile title-main">Оформление заказа</div>
-                <div class="payment-section__row">
-                    <div class="title-main title-main--middle">Ваш заказ</div>
-                </div>
+                <div class="payment-section__title title">Ваш заказ</div>
                 <div class="payment-section__content payment-content">
                     <div class="payment-content__item payment-row">
                         <div class="payment-row__text main-text">Товаров на:</div>
@@ -253,22 +250,20 @@
                         <div class="payment-row__title payment-row__title--red">Не рассчитана</div>
                     </div>
                 </div>
-                <div class="payment-section__row payment-section__row--mobile">
-                    <div class="title-main">Итого:</div>
-                    <div class="payment-section__title title-main title-main--middle">2 748 руб.</div>
+                <div class="payment-section__row">
+                    <div class="title">Итого:</div>
+                    <div class="title title--middle">2 748 руб.</div>
                 </div>
                 <div class="payment-section__buttons js-checkbox-input">
                     <input type="checkbox" class="custom-checkbox js-open-checkbox" id="personal-date" value="personal-date">
                     <label class="section-checkbox__item" for="personal-date">
-                        <span class="main-text">Я согласен на <a href="/include/licenses_detail.php" target="_blank">обработку персональных данных</a></span>
+                        <span class="main-text">Я согласен на <a class="text-link" href="/include/licenses_detail.php" target="_blank">обработку персональных данных</a></span>
                     </label>
-                    <button form="order-payment-form" type="submit" disabled="disabled" class="js-object-checkbox payment-section__submit button-main js-submit-form-order">Оформить заказ</button>
-                    <button form="order-payment-form" type="submit" class="payment-section__submit button-main button-main--white">Сохранить заказ</button>
+                    <button type="submit" form="order-payment-form" disabled="disabled" class="payment-section__submit button-main js-object-checkbox js-submit-form-order">Оформить заказ</button>
+                    <button type="submit" class="payment-section__submit button-main button-main--white">Сохранить заказ</button>
                 </div>
             </div>
         </div>
-
-    </div>
 </div>
 
 

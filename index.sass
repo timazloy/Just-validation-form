@@ -1,5 +1,38 @@
-.objects-personal
+* 
+  font-family: 'Manrope', sans-serif
+
+body
+  margin: 0
+
+input, textarea
+  background: #F8F8F8
+  border-radius: 5px
+  border: none
+  border: 1px solid #eeeeee
+
+textarea 
+  resize: none
+
+p
+  margin: 0px
+
+
+.page__form
+  margin: 100px auto
+
+.wrapper
   max-width: 1061px
+  display: flex
+  justify-content: space-between
+  padding: 0 15px
+
+  &__column
+    max-width: 668px
+    width: 100%
+
+    &--small
+      max-width: 271px
+      width: 100%
 
   &__button
     display: flex
@@ -44,7 +77,12 @@
         justify-content: center
         width: 100%
 
-.title-main
+.form-block
+    display: flex
+    gap: 16px
+
+.title
+  font-family: 'Manrope', sans-serif
   font-weight: 800
   font-size: 24px
   line-height: 130%
@@ -74,7 +112,7 @@
     margin-left: 4px
 
   @media (max-width: 700px)
-    .title-main
+    .title
       font-size: 20px
 
       &--small
@@ -82,13 +120,45 @@
         font-size: 16px
 
   @media (max-width: 620px)
-    .title-main
+    .title
       display: flex
       align-items: center
       font-size: 20px
 
     &--middle
       font-size: 16px
+
+.inputs-block
+  width: 100%
+
+  &__title
+    margin-bottom: 24px
+    padding: 9px 0
+
+  &__item
+    margin-bottom: 24px
+
+  &__title-cover
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  &__wrapper
+    display: flex
+    gap: 16px
+
+
+
+
+
+.star
+  color: #e62222
+  font-size: 12px
+
+
+.text-link
+  color: #1C83FD
+  text-decoration: none
 
 .button-main
   color: #333333
@@ -171,7 +241,7 @@
   flex-direction: column
   gap: 16px
 
-.object-input
+.custom-imput
   display: flex
   flex-direction: column
   gap: 8px
@@ -268,26 +338,11 @@ input[type="text"]:disabled
 .object-checkbox__text
   width: 125px
 
-.object-input__span
+.custom-imput__span
   margin: 0
 
-.input-error
-  border: 1.5px solid #FF2323
-  background-image: url("/images/input-error.png")
-  background-repeat: no-repeat
-  background-position: 99% center
 
-.error-text
-  display: none
-  font-weight: 400
-  font-size: 12px
-  line-height: 16px
-  color: #FF2323
-
-.error-text--active
-  display: flex
-
-.object-input__cover
+.custom-imput__cover
   display: flex
   flex-direction: column
   gap: 4px
@@ -300,8 +355,6 @@ input[type="text"]:disabled
   width: 100%
 
 .order-form__item
-  display: flex
-  gap: 16px
   margin-bottom: 48px
 
 .order-form__item--last
@@ -315,7 +368,7 @@ input[type="text"]:disabled
   max-width: 271px
   width: 100%
 
-.main-img
+.img
   width: 44px
   height: 44px
   object-fit: cover
@@ -386,8 +439,8 @@ input[type="text"]:disabled
 .checkbox-wrapper label span:after
   top: 4px
   left: 4px
-  width: 10px
-  height: 10px
+  width: 12px
+  height: 11px
   border-radius: 50%
   background: #333333
 
@@ -521,7 +574,7 @@ input[type="text"]:disabled
   color: #FF2323
 
 .payment-section__title
-  margin-right: 10px
+  margin-bottom: 24px
 
 .payment-section__content
   margin-bottom: 24px
@@ -539,7 +592,7 @@ input[type="text"]:disabled
 label
   margin: 0
 
-.main-img--mobile
+.img--mobile
   display: none
 
 .order-form__title-cover
@@ -556,7 +609,7 @@ label
   display: flex
   width: 100%
 
-.object-form__wrapper .object-input
+.object-form__wrapper .custom-imputs
   margin-bottom: 0
 
 .payment-section__buttons--mobile
@@ -583,8 +636,8 @@ label
     order: 1
     margin: 0 auto
 
-@media (max-width: 620px)
-  .main-img
+// @media (max-width: 620px)
+  .img
     display: none
 
   .order-good__content
@@ -614,7 +667,7 @@ label
     display: flex
     gap: 16px
 
-  .main-img--mobile
+  .img--mobile
     display: flex
     align-items: center
 
@@ -651,7 +704,7 @@ label
     display: flex
     gap: 48px
 
-  .payment-section__row--mobile .title-main
+  .payment-section__row--mobile .title
     width: 120px
     margin-right: 0
 
@@ -809,6 +862,7 @@ label
   gap: 10px
   align-items: center
   padding: 0 8px 8px
+  text-decoration: none
 
 .custom-select__item:hover
   background-color: #F8F8F8
@@ -816,5 +870,68 @@ label
 .custom-select__value
   display: none
 
-.page__object-empty
-  margin: 100px auto
+
+.input-error
+  border: 1.5px solid #FF2323
+  background-image: url("./images/input-error.png")
+  background-repeat: no-repeat
+  background-position: 99% center
+
+.error-text
+  display: none
+  font-weight: 400
+  font-size: 12px
+  line-height: 16px
+  color: #FF2323
+
+.error-text--active
+  display: flex
+
+
+@media ( max-width: 1024px )
+  .wrapper 
+    flex-direction: column
+    gap: 35px
+    
+    &__column
+      order: 2
+      margin: 0 auto
+
+      &--small
+        order: 1
+        max-width: 668px
+
+  .payment-row
+    justify-content: space-between
+
+  
+  
+@media ( max-width: 768px )
+  .wrapper 
+    
+    &__column
+
+      &--small
+        order: 1
+        max-width: 271px
+
+  .page__form 
+    margin: 75px auto
+
+  .img
+    display: none
+
+    &--mobile
+      display: flex
+
+  .inputs-block
+    &__title
+      display: flex
+      align-items: center
+      gap: 16px
+
+    &__title-cover
+      flex-direction: column
+      align-items: start
+
+  
