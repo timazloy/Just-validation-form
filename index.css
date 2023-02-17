@@ -1,6 +1,7 @@
 @charset "UTF-8";
 * {
   font-family: "Manrope", sans-serif;
+  box-sizing: border-box;
 }
 
 body {
@@ -485,10 +486,10 @@ input[type=text]:disabled {
 }
 
 .checkbox-wrapper label span:after {
-  top: 4px;
-  left: 4px;
+  top: 3px;
+  left: 3px;
   width: 12px;
-  height: 11px;
+  height: 12px;
   border-radius: 50%;
   background: #333333;
 }
@@ -517,10 +518,12 @@ input[type=text]:disabled {
   padding: 10px 13px 10px;
   background: #f7f7f7;
   outline: none;
+  width: 100%;
 }
 
 .custom-input--small {
   max-width: 180px;
+  width: 100%;
 }
 
 .order-basket__title--long {
@@ -879,5 +882,30 @@ label {
   .inputs-block__title-cover {
     flex-direction: column;
     align-items: start;
+  }
+  .order-form__item {
+    margin-bottom: 24px;
+  }
+  .object-checkbox--column {
+    flex-direction: column;
+  }
+}
+@media (max-width: 500px) {
+  .page__form {
+    margin: 15px auto;
+  }
+  .object-form__cover {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .object-form__cover .custom-input {
+    order: 2;
+    max-width: unset;
+  }
+  .object-form__cover .custom-checkbox {
+    order: 1;
+  }
+  .order-form__item--mobile {
+    flex-direction: column;
   }
 }/*# sourceMappingURL=index.css.map */
