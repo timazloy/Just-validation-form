@@ -861,7 +861,6 @@ label {
 @media (max-width: 768px) {
   .wrapper__column--small {
     order: 1;
-    max-width: 271px;
   }
   .page__form {
     margin: 75px auto;
