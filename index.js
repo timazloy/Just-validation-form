@@ -103,4 +103,28 @@
     })
 
 
+document.addEventListener('scroll', function() {
+    const scroll = Number(window.pageYOffset.toFixed(0))
+    const mobileSection = document.querySelector('.js-section-mobile')
+    const test = document.querySelector('#scroll-form')
 
+    let scrollHeight = Math.max(
+        document.body.scrollHeight, document.documentElement.scrollHeight,
+        document.body.offsetHeight, document.documentElement.offsetHeight,
+        document.body.clientHeight, document.documentElement.clientHeight
+      );
+
+    if (scroll + document.documentElement.clientHeight > scrollHeight - 250)
+        mobileSection.classList.add('active')
+    else
+        mobileSection.classList.remove('active')
+
+    console.log(scrollHeight);
+    console.log(scroll);
+    console.log(document.documentElement.clientHeight);
+
+    // if (scroll >= 400) 
+    //     mobileSection.classList.add('active')
+    // else 
+    //     mobileSection.classList.remove('active')
+})

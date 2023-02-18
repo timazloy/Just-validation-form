@@ -608,6 +608,19 @@ input[type=text]:disabled {
   margin-bottom: 15px;
 }
 
+.payment-section__buttons-mobile {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  bottom: 0;
+  background: white;
+  left: 0;
+  right: 0;
+  border-top: 1px solid #DFDFDF;
+  padding: 16px;
+  transition: 0.3s;
+}
+
 .payment-section__row {
   display: flex;
   align-items: center;
@@ -908,4 +921,18 @@ label {
   .order-form__item--mobile {
     flex-direction: column;
   }
+  .payment-section__buttons {
+    display: none;
+  }
+  .payment-section__buttons-mobile {
+    display: flex;
+    flex-direction: column;
+  }
+  .payment-section__row {
+    margin-bottom: 0;
+  }
+}
+.active {
+  opacity: 0;
+  pointer-events: none;
 }/*# sourceMappingURL=index.css.map */
