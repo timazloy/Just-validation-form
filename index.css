@@ -192,10 +192,18 @@ input[type=text]:disabled {
   }
 }
 
+#checkbox-section label {
+  width: 231px;
+}
+
 .custom-imput {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+.custom-imput__wrapper {
+  display: flex;
+  gap: 24px;
 }
 .custom-imput__item:not(:last-child) {
   margin-bottom: 24px;
@@ -404,6 +412,17 @@ input[type=text]:disabled {
   width: 100%;
 }
 
+.input-error {
+  border: 1.5px solid #FF2323;
+  background-image: url("./images/input-error.png");
+  background-repeat: no-repeat;
+  background-position: 99% center;
+}
+
+.payment-section {
+  position: fixed;
+  max-width: 271px;
+}
 .payment-section__buttons-mobile {
   display: none;
   flex-direction: column;
@@ -583,6 +602,10 @@ input[type=text]:disabled {
 }
 
 @media (max-width: 1024px) {
+  .payment-section {
+    position: inherit;
+    max-width: unset;
+  }
   .wrapper {
     flex-direction: column;
     gap: 35px;

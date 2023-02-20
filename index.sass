@@ -175,10 +175,17 @@ input[type="text"]:disabled
         text-align: center
         padding: 7px 24px
 
+#checkbox-section label
+  width: 231px
+
 .custom-imput
   display: flex
   flex-direction: column
   gap: 8px
+
+  &__wrapper
+    display: flex
+    gap: 24px
 
   &__item:not(:last-child)
     margin-bottom: 24px
@@ -371,7 +378,15 @@ input[type="text"]:disabled
     max-width: 180px
     width: 100%
 
+.input-error
+  border: 1.5px solid #FF2323
+  background-image: url("./images/input-error.png")
+  background-repeat: no-repeat
+  background-position: 99% center
+
 .payment-section
+  position: fixed
+  max-width: 271px
 
   &__buttons-mobile
     display: none
@@ -543,6 +558,10 @@ input[type="text"]:disabled
   pointer-events: none
 
 @media ( max-width: 1024px )
+  .payment-section
+    position: inherit
+    max-width: unset
+
   .wrapper
     flex-direction: column
     gap: 35px
