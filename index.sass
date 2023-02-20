@@ -17,6 +17,10 @@ textarea
 p
   margin: 0px
 
+input[type="text"]:disabled
+  background: #d7d7d7
+  cursor: not-allowed
+
 .page__form
   margin: 100px auto
 
@@ -80,6 +84,7 @@ p
 .form-block
   display: flex
   gap: 16px
+  width: 100%
 
 .title
   font-family: 'Manrope', sans-serif
@@ -110,23 +115,6 @@ p
     line-height: 130%
     color: #333333
     margin-left: 4px
-
-  @media (max-width: 700px)
-    .title
-      font-size: 20px
-
-      &--small
-        width: 100%
-        font-size: 16px
-
-  @media (max-width: 620px)
-    .title
-      display: flex
-      align-items: center
-      font-size: 20px
-
-    &--middle
-      font-size: 16px
 
 .inputs-block
   width: 100%
@@ -184,34 +172,6 @@ p
         text-align: center
         padding: 7px 24px
 
-.object-item
-  display: flex
-  justify-content: space-between
-  align-items: center
-  padding-bottom: 16px
-
-  &:not(:last-child)
-    border-bottom: 1px solid #DFDFDF
-
-  &__title
-    font-size: 14px
-    line-height: 130%
-    color: #333333
-
-  &__cover
-    display: flex
-    align-items: center
-    gap: 10px
-
-  &__cover--main
-    gap: 13px
-
-  @media (max-width: 420px)
-    .object-item
-      &__wrapper
-        display: none
-
-
 .custom-imput
   display: flex
   flex-direction: column
@@ -241,7 +201,7 @@ p
   line-height: 130%
   color: #868686
 
-.object-checkbox
+.checkbox-section
   display: flex
   gap: 16px
 
@@ -257,65 +217,34 @@ p
     border: none
     border-radius: 5px
 
-.object-form
-
-  &__wrapper
-    display: flex
-    gap: 16px
-
-  &__title
-    margin-bottom: 24px
-
-  &__title
-    margin-bottom: 24px
-
-  &__textarea
-    max-width: 339px
-    width: 100%
-
 //чекбокс
 .custom-checkbox
   position: absolute
   z-index: -1
   opacity: 0
 
-.custom-checkbox+label
-  display: inline-flex
-  align-items: center
-  user-select: none
-  cursor: pointer
+  &+label
+    display: inline-flex
+    align-items: center
+    user-select: none
+    cursor: pointer
 
-.custom-checkbox+label::before
-  content: ''
-  width: 20px
-  height: 20px
-  flex-shrink: 0
-  flex-grow: 0
-  border: 1.5px solid #868686
-  border-radius: 4px
-  margin-right: 10px
-  background-repeat: no-repeat
-  background-position: center center
+  &+label::before
+    content: ''
+    width: 20px
+    height: 20px
+    flex-shrink: 0
+    flex-grow: 0
+    border: 1.5px solid #868686
+    border-radius: 4px
+    margin-right: 10px
+    background-repeat: no-repeat
+    background-position: center center
 
-.custom-checkbox:checked+label::before
-  border-color: #FFD800
-  background-color: #FFD800
-  background-image: url("./images/checked.svg")
-
-input[type="text"]:disabled
-  background: #d7d7d7
-  cursor: not-allowed
-
-.object-checkbox__text
-  width: 125px
-
-.custom-imput__span
-  margin: 0
-
-.custom-imput__cover
-  display: flex
-  flex-direction: column
-  gap: 4px
+  &:checked+label::before
+    border-color: #FFD800
+    background-color: #FFD800
+    background-image: url("./images/checked.svg")
 
 .order-section
   display: flex
@@ -335,7 +264,6 @@ input[type="text"]:disabled
   &__item
     width: 100%
 
-
 .order-form
   width: 100%
 
@@ -354,16 +282,15 @@ input[type="text"]:disabled
   height: 44px
   object-fit: cover
 
-.form-block
-  width: 100%
-
+  &--mobile
+    display: none
 
 .section-checkbox
   display: flex
   flex-direction: column
 
-.section-checkbox__item:not(:last-child)
-  margin-bottom: 24px
+  &__item:not(:last-child)
+    margin-bottom: 24px
 
 /*кастомнй чекбокс*/
 
@@ -372,49 +299,48 @@ input[type="text"]:disabled
   flex-direction: column
   gap: 24px
 
-.checkbox-wrapper input
-  position: absolute
-  opacity: 0
-  сursor: pointer
+  & input
+    position: absolute
+    opacity: 0
+    сursor: pointer
 
-.checkbox-wrapper__label
-  display: block
-  position: relative
-  padding-left: 30px
-  /*margin-bottom: 24px*/
-  cursor: pointer
-  font-size: 17px
-  user-select: none
+  &__label
+    display: block
+    position: relative
+    padding-left: 30px
+    cursor: pointer
+    font-size: 17px
+    user-select: none
 
-.checkbox-wrapper span
-  position: absolute
-  top: 0
-  left: 0
-  height: 20px
-  width: 20px
-  background-color: white
-  border-radius: 50%
-  border: 1px solid #868686
+  & span
+    position: absolute
+    top: 0
+    left: 0
+    height: 20px
+    width: 20px
+    background-color: white
+    border-radius: 50%
+    border: 1px solid #868686
 
-.checkbox-wrapper label input:checked~span
-  background-color: white
-  border: 1px solid #333333
+  & label input:checked~span
+    background-color: white
+    border: 1px solid #333333
 
-.checkbox-wrapper span:after
-  content: ""
-  position: absolute
-  display: none
+  & span:after
+    content: ""
+    position: absolute
+    display: none
 
-.checkbox-wrapper label input:checked~span:after
-  display: block
+  & label input:checked~span:after
+    display: block
 
-.checkbox-wrapper label span:after
-  top: 3px
-  left: 3px
-  width: 12px
-  height: 12px
-  border-radius: 50%
-  background: #333333
+  & label span:after
+    top: 3px
+    left: 3px
+    width: 12px
+    height: 12px
+    border-radius: 50%
+    background: #333333
 
 .radio-section
   max-width: 334px
@@ -429,9 +355,6 @@ input[type="text"]:disabled
   outline: none
   min-height: 77px
 
-  &--high
-    min-height: 140px
-
 .custom-input
   border-radius: 5px
   padding: 10px 13px 10px
@@ -442,7 +365,6 @@ input[type="text"]:disabled
   &--small
     max-width: 180px
     width: 100%
-
 
 .payment-section
 
@@ -470,36 +392,33 @@ input[type="text"]:disabled
     border: none
     color: #1C83FD
 
+  &__title
+    margin-bottom: 24px
+
+  &__content
+    margin-bottom: 24px
+
 .payment-row
   display: flex
   gap: 48px
 
-.payment-row__text
-  font-weight: 400
-  font-size: 14px
-  line-height: 130%
-  color: #868686
-  max-width: 121px
-  width: 100%
+  &__text
+    font-weight: 400
+    font-size: 14px
+    line-height: 130%
+    color: #868686
+    max-width: 121px
+    width: 100%
 
-.payment-content__item:not(:last-child)
-  margin-bottom: 8px
+  &__title
+    font-weight: 600
+    font-size: 14px
+    line-height: 130%
+    text-align: center
+    color: #333333
 
-.payment-row__title
-  font-weight: 600
-  font-size: 14px
-  line-height: 130%
-  text-align: center
-  color: #333333
-
-.payment-row__title--red
-  color: #FF2323
-
-.payment-section__title
-  margin-bottom: 24px
-
-.payment-section__content
-  margin-bottom: 24px
+  &--red
+    color: #FF2323
 
 .object-form__cover
   display: flex
@@ -514,8 +433,8 @@ input[type="text"]:disabled
 label
   margin: 0
 
-.img--mobile
-  display: none
+.payment-content__item:not(:last-child)
+  margin-bottom: 8px
 
 .order-form__title-cover
   display: flex
@@ -709,8 +628,6 @@ label
     padding: 0 8px 8px
     text-decoration: none
 
-
-
 .custom-select__value
   display: none
 
@@ -733,9 +650,6 @@ label
 .error-text--active
   display: flex
 
-
-
-
 @media ( max-width: 1024px )
   .wrapper
     flex-direction: column
@@ -753,6 +667,13 @@ label
     justify-content: space-between
 
 @media ( max-width: 768px )
+  .title
+    font-size: 20px
+
+    &--small
+      width: 100%
+      font-size: 16px
+
   .wrapper
 
     &__column
@@ -787,6 +708,14 @@ label
     flex-direction: column
 
 @media ( max-width: 500px )
+  .title
+    display: flex
+    align-items: center
+    font-size: 20px
+
+    &--middle
+      font-size: 16px
+
   .page__form
     margin: 15px auto
 
@@ -814,6 +743,6 @@ label
   .payment-section__row
     margin-bottom: 0
 
-.active 
+.active
   opacity: 0
   pointer-events: none
