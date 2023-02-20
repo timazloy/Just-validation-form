@@ -11,6 +11,9 @@ input, textarea
   border: none
   border: 1px solid #eeeeee
 
+label
+  margin: 0
+
 textarea
   resize: none
 
@@ -277,6 +280,10 @@ input[type="text"]:disabled
     margin-bottom: 24px
     padding: 9px 0
 
+    &-cover
+      display: flex
+      justify-content: space-between
+
 .img
   width: 44px
   height: 44px
@@ -291,8 +298,6 @@ input[type="text"]:disabled
 
   &__item:not(:last-child)
     margin-bottom: 24px
-
-/*кастомнй чекбокс*/
 
 .checkbox-wrapper
   display: flex
@@ -380,6 +385,10 @@ input[type="text"]:disabled
     padding: 16px
     transition: .3s
 
+  ^&__buttons
+    &--mobile
+      display: none
+
   &__row
     display: flex
     align-items: center
@@ -395,8 +404,17 @@ input[type="text"]:disabled
   &__title
     margin-bottom: 24px
 
+    &--mobile
+      display: none
+
   &__content
     margin-bottom: 24px
+
+  &__submit
+    width: 100%
+
+    &:not(:last-child)
+      margin-bottom: 16px
 
 .payment-row
   display: flex
@@ -424,221 +442,11 @@ input[type="text"]:disabled
   display: flex
   gap: 24px
 
-.payment-section__submit
-  width: 100%
-
-.payment-section__submit:not(:last-child)
-  margin-bottom: 16px
-
-label
-  margin: 0
-
 .payment-content__item:not(:last-child)
   margin-bottom: 8px
 
-.order-form__title-cover
-  display: flex
-  justify-content: space-between
-
-.payment-section__title--mobile
-  display: none
-
 .object-checkbox__text
   width: 125px
-
-.object-form__wrapper .custom-imputs
-  margin-bottom: 0
-
-.payment-section__buttons--mobile
-  display: none
-
-.object-form__wrapper--indent
-  margin-bottom: 24px
-
-.hide-desktop
-  display: none
-
-@media (max-width: 980px)
-  .order-section
-    gap: 40px
-
-@media (max-width: 870px)
-  .order-section
-    flex-direction: column
-
-  .order-section__column
-    order: 2
-
-  .order-section__column--small
-    order: 1
-    margin: 0 auto
-
-// @media (max-width: 620px)
-  .img
-    display: none
-
-  .order-section__title
-    display: none
-
-  .order-form__title
-    padding: 0
-    display: flex
-    gap: 16px
-
-  .img--mobile
-    display: flex
-    align-items: center
-
-  .order-form__title-cover
-    display: flex
-    flex-direction: column
-
-  .order-form__item--mobile
-    flex-direction: column
-    gap: 33px
-
-  .custom-textarea--high
-    display: none
-
-  .order-form__item
-    margin-bottom: 33px
-
-  .payment-section__row
-    margin-bottom: 16px
-
-  .payment-section__title--mobile
-    display: flex
-    justify-content: center
-    margin: 0 0 16px
-
-  .payment-section__buttons
-    display: none
-
-  .order-section
-    gap: 32px
-
-  .payment-section__row--mobile
-    margin-bottom: 0
-    display: flex
-    gap: 48px
-
-  .payment-section__row--mobile .title
-    width: 120px
-    margin-right: 0
-
-  .object-form__cover
-    flex-direction: column
-
-  .order-form__item--last
-    margin-bottom: 0
-
-  .order-section__column--small
-    max-width: unset
-
-  .payment-section__buttons--mobile
-    display: flex
-    flex-direction: column
-
-    position: fixed
-    bottom: 0
-    background: white
-    left: 0
-    right: 0
-    border-top: 1px solid #DFDFDF
-    padding: 16px
-
-  .order-form__basket
-    margin-bottom: 32px
-
-  .payment-section
-    max-width: 271px
-    margin: 0 auto
-
-.custom-select
-  position: relative
-  background: #f7f7f7
-  border: 1px solid #eeeeee
-  border-radius: 2px
-  box-shadow: none
-  color: #383838
-  height: auto
-  font-size: 13px
-  outline: none
-  width: 100%
-
-  &__header
-    cursor: pointer
-    display: flex
-    color: #868686
-    justify-content: space-between
-    align-items: center
-    padding: 11px 14px
-
-  &__current
-    font-weight: 400
-    font-size: 14px
-    line-height: 130%
-
-  &__icon
-    height: 6px
-    width: 12px
-    transition: .2s ease
-
-    &--active
-      transform: rotate(180deg)
-
-  &__body
-    border-top: 0
-    display: none
-    left: 0
-    position: absolute
-    right: 0
-    top: 100%
-    background: #FFFFFF
-    box-shadow: 0px 4px 8px rgba(51, 51, 51, 0.2)
-    border-radius: 5px
-
-  &__item
-    cursor: pointer
-    padding: 8px
-    color: #868686
-    font-weight: 400
-    font-size: 14px
-    line-height: 130%
-
-    &:hover
-      background-color: #F8F8F8
-
-    &--active
-      font-weight: 600
-      font-size: 14px
-      line-height: 130%
-      color: #333333
-
-  &__text
-    font-weight: 400
-    font-size: 14px
-    line-height: 130%
-    color: #333333
-
-  &__item-add
-    display: flex
-    gap: 10px
-    align-items: center
-    padding: 0 8px 8px
-    text-decoration: none
-
-.custom-select__value
-  display: none
-
-.custom-select.is-active .custom-select__body
-  display: block
-
-.input-error
-  border: 1.5px solid #FF2323
-  background-image: url("./images/input-error.png")
-  background-repeat: no-repeat
-  background-position: 99% center
 
 .error-text
   display: none
@@ -647,8 +455,12 @@ label
   line-height: 16px
   color: #FF2323
 
-.error-text--active
-  display: flex
+  &--active
+    display: flex
+
+.active
+  opacity: 0
+  pointer-events: none
 
 @media ( max-width: 1024px )
   .wrapper
@@ -680,7 +492,6 @@ label
 
       &--small
         order: 1
-        // max-width: 271px
 
   .page__form
     margin: 75px auto
@@ -733,16 +544,13 @@ label
   .order-form__item--mobile
     flex-direction: column
 
-  .payment-section__buttons
-    display: none
+  .payment-section
+    &__buttons
+      display: none
 
-  .payment-section__buttons-mobile
-    display: flex
-    flex-direction: column
+    &__buttons-mobile
+      display: flex
+      flex-direction: column
 
-  .payment-section__row
-    margin-bottom: 0
-
-.active
-  opacity: 0
-  pointer-events: none
+    &__row
+      margin-bottom: 0
