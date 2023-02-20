@@ -184,17 +184,6 @@ input[type=text]:disabled {
   background-color: #cccccc;
   cursor: not-allowed;
 }
-@media (max-width: 700px) {
-  .button-main[disabled] .button-main {
-    width: 100%;
-    text-align: center;
-    padding: 7px 24px;
-  }
-}
-
-#checkbox-section label {
-  width: 231px;
-}
 
 .custom-imput {
   display: flex;
@@ -234,6 +223,9 @@ input[type=text]:disabled {
 .checkbox-section {
   display: flex;
   gap: 16px;
+}
+.checkbox-section__text {
+  width: 120px;
 }
 .checkbox-section__label {
   display: flex;
@@ -623,6 +615,9 @@ input[type=text]:disabled {
   }
 }
 @media (max-width: 768px) {
+  .checkbox-section--column {
+    flex-direction: column;
+  }
   .title {
     font-size: 20px;
   }
@@ -693,5 +688,8 @@ input[type=text]:disabled {
   }
   .payment-section__row {
     margin-bottom: 0;
+  }
+  .custom-imput__wrapper {
+    flex-direction: column;
   }
 }/*# sourceMappingURL=index.css.map */

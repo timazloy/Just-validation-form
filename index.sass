@@ -169,14 +169,6 @@ input[type="text"]:disabled
     background-color: #cccccc
     cursor: not-allowed
 
-    @media (max-width: 700px)
-      .button-main
-        width: 100%
-        text-align: center
-        padding: 7px 24px
-
-#checkbox-section label
-  width: 231px
 
 .custom-imput
   display: flex
@@ -214,6 +206,9 @@ input[type="text"]:disabled
 .checkbox-section
   display: flex
   gap: 16px
+
+  &__text
+    width: 120px
 
   &__label
     display: flex
@@ -578,6 +573,10 @@ input[type="text"]:disabled
     justify-content: space-between
 
 @media ( max-width: 768px )
+  .checkbox-section
+    &--column
+      flex-direction: column
+
   .title
     font-size: 20px
 
@@ -653,3 +652,7 @@ input[type="text"]:disabled
 
     &__row
       margin-bottom: 0
+
+  .custom-imput
+    &__wrapper
+      flex-direction: column
