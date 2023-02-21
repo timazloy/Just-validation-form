@@ -16,31 +16,11 @@ $(document)
     .on('blur', '.js-input-phone', maskPhone)
     .on('keydown', '.js-input-phone', maskPhone)
 
-
 // валидация формы
-const validationInputArr = []
+window.validationInputArr = []
 
 document.querySelectorAll('.js-validation-input').forEach(
     item => validationInputArr.push(new ValidationForm(item)))
-
-
-// отправка формы оформления заказа
-const buttonsSubmitFormOrder = document.querySelectorAll('.js-submit-form-order')
-
-
-buttonsSubmitFormOrder.forEach(item => {
-    item.addEventListener('click', (e) => {
-        e.preventDefault()
-
-        validationInputArr.forEach(item => item.validateInput())
-
-        const errors = document.querySelectorAll('.error-text--active')
-        const scrollElem = document.getElementById('scroll-form');
-
-        if (errors.length !== 0)
-            scrollElem.scrollIntoView({ behavior: "smooth", block: "center" });
-    })
-})
 
 // селект
 document.querySelectorAll('.js-custom-select').forEach(

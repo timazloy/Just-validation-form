@@ -1,6 +1,3 @@
-
-
-// валидация формы
 export default class ValidationForm {
     constructor(wrapper) {
         this.input = wrapper.querySelector('.js-check-empty')
