@@ -1,0 +1,663 @@
+*
+  font-family: 'Manrope', sans-serif
+  box-sizing: border-box
+
+$black: #333333
+$grey: #cccccc
+$yellow: #FFD800
+$red: #FF2323
+
+body
+  margin: 0
+
+input, textarea
+  background: #F8F8F8
+  border-radius: 5px
+  border: none
+  border: 1px solid #eeeeee
+
+label
+  margin: 0
+
+textarea
+  resize: none
+
+p
+  margin: 0px
+
+input[type="text"]:disabled
+  background: #d7d7d7
+  cursor: not-allowed
+
+.page__form
+  margin: 100px auto
+
+.wrapper
+  max-width: 1061px
+  display: flex
+  justify-content: space-between
+  padding: 0 15px
+
+  &__column
+    max-width: 668px
+    width: 100%
+
+    &--small
+      max-width: 271px
+      width: 100%
+
+  &__button
+    display: flex
+    width: fit-content
+
+  &__title
+    margin-bottom: 32px
+
+  &__text
+    margin-bottom: 31px
+    font-weight: 500
+    font-size: 14px
+    line-height: 130%
+    color: #868686
+
+  &__top
+    display: flex
+    justify-content: space-between
+    margin-bottom: 31px
+
+  @media (max-width: 700px)
+    .objects-personal
+
+      &__top
+        flex-direction: column
+        gap: 16px
+        align-items: center
+        margin-bottom: 24px
+
+      &__title
+        text-align: center
+        margin-bottom: 24px
+
+      &__text
+        margin-bottom: 24px
+
+      &__text
+        text-align: center
+
+      &__button
+        margin: 0 auto
+        justify-content: center
+        width: 100%
+
+.form-block
+  display: flex
+  gap: 16px
+  width: 100%
+
+.title
+  font-family: 'Manrope', sans-serif
+  font-weight: 800
+  font-size: 24px
+  line-height: 130%
+  color: $black
+  display: flex
+
+  &--middle
+    font-size: 20px
+
+  &--small
+    font-weight: 700
+    font-size: 16px
+    line-height: 130%
+    color: $black
+
+  &__text
+    font-weight: 400
+    font-size: 14px
+    line-height: 130%
+    color: $black
+
+  &__span
+    font-weight: 600
+    font-size: 14px
+    line-height: 130%
+    color: $black
+    margin-left: 4px
+
+.inputs-block
+  width: 100%
+
+  &__title
+    margin-bottom: 24px
+    padding: 9px 0
+
+  &__item
+    margin-bottom: 24px
+
+  &__title-cover
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  &__wrapper
+    display: flex
+    gap: 16px
+
+.star
+  color: #e62222
+  font-size: 12px
+
+.text-link
+  color: #1C83FD
+  text-decoration: none
+
+.button-main
+  color: $black
+  background: $yellow
+  border: none
+  padding: 11px 24px
+  border-radius: 5px
+  font-size: 14px
+  line-height: 130%
+  transition: .1s ease-in-out
+  cursor: pointer
+
+  &--white
+    background: white
+    border: 1.5px solid $yellow
+
+  &:hover
+    color: $black
+    background: #F1C400
+
+  &[disabled]
+    background-color: $grey
+    cursor: not-allowed
+
+.custom-imput
+  display: flex
+  flex-direction: column
+  gap: 8px
+
+  &__wrapper
+    display: flex
+    gap: 24px
+
+  &__item:not(:last-child)
+    margin-bottom: 24px
+
+  &--wide
+    width: 100%
+    max-width: 472px
+
+  &--flex
+    display: flex
+    flex-direction: column
+    gap: 8px
+
+  &__title
+    font-weight: 400
+    font-size: 12px
+    line-height: 16px
+    color: $black
+
+.main-text
+  font-weight: 400
+  font-size: 14px
+  line-height: 130%
+  color: #868686
+
+.checkbox-section
+  display: flex
+  gap: 16px
+
+  &__text
+    width: 120px
+
+  &__label
+    display: flex
+    align-items: center
+    gap: 10px
+    cursor: pointer
+
+  &__input
+    max-width: 266px
+    min-height: 40px
+    border: none
+    border-radius: 5px
+
+//чекбокс
+.custom-checkbox
+  position: absolute
+  z-index: -1
+  opacity: 0
+
+  &+label
+    display: inline-flex
+    align-items: center
+    user-select: none
+    cursor: pointer
+
+  &+label::before
+    content: ''
+    width: 20px
+    height: 20px
+    flex-shrink: 0
+    flex-grow: 0
+    border: 1.5px solid #868686
+    border-radius: 4px
+    margin-right: 10px
+    background-repeat: no-repeat
+    background-position: center center
+
+  &:checked+label::before
+    border-color: $yellow
+    background-color: $yellow
+    background-image: url("../images/checked.svg")
+
+.order-section
+  display: flex
+  gap: 122px
+
+  &__column
+    max-width: 668px
+    width: 100%
+
+    &--small
+      max-width: 271px
+      width: 100%
+
+  &__title
+    margin-bottom: 32px
+
+  &__item
+    width: 100%
+
+.order-form
+  width: 100%
+
+  &__item
+    margin-bottom: 48px
+
+    &--last
+      margin-bottom: 0
+
+  &__title
+    margin-bottom: 24px
+    padding: 9px 0
+
+    &-cover
+      display: flex
+      justify-content: space-between
+
+.img
+  width: 44px
+  height: 44px
+  object-fit: cover
+
+  &--mobile
+    display: none
+
+.section-checkbox
+  display: flex
+  flex-direction: column
+  gap: 24px
+
+.checkbox-wrapper
+  display: flex
+  flex-direction: column
+  gap: 24px
+
+  & input
+    position: absolute
+    opacity: 0
+    сursor: pointer
+
+  &__label
+    display: block
+    position: relative
+    padding-left: 30px
+    cursor: pointer
+    font-size: 17px
+    user-select: none
+
+  & span
+    position: absolute
+    top: 0
+    left: 0
+    height: 20px
+    width: 20px
+    background-color: white
+    border-radius: 50%
+    border: 1px solid #868686
+
+  & label input:checked~span
+    background-color: white
+    border: 1px solid $black
+
+  & span:after
+    content: ""
+    position: absolute
+    display: none
+
+  & label input:checked~span:after
+    display: block
+
+  & label span:after
+    top: 3px
+    left: 3px
+    width: 12px
+    height: 12px
+    border-radius: 50%
+    background: $black
+
+.radio-section
+  max-width: 334px
+  width: 100%
+  display: flex
+  gap: 16px
+
+.custom-textarea
+  border-radius: 5px
+  padding: 10px 13px 10px
+  background: #f7f7f7
+  outline: none
+  min-height: 77px
+
+.custom-input
+  border-radius: 5px
+  padding: 10px 13px 10px
+  background: #f7f7f7
+  outline: none
+  width: 100%
+
+  &--small
+    max-width: 180px
+    width: 100%
+
+.input-error
+  border: 1.5px solid $red
+  background-image: url("./images/input-error.png")
+  background-repeat: no-repeat
+  background-position: 99% center
+
+.payment-section
+  position: fixed
+  max-width: 271px
+
+  &__checkbox:not(:last-child)
+    margin-bottom: 24px
+
+  &__buttons-mobile
+    display: none
+    flex-direction: column
+    position: fixed
+    bottom: 0
+    background: white
+    left: 0
+    right: 0
+    border-top: 1px solid #DFDFDF
+    padding: 16px
+    transition: .3s
+
+  &__buttons
+    &--mobile
+      display: none
+
+  &__row
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 24px
+
+  &__button
+    margin-right: 37px
+    background: none
+    border: none
+    color: #1C83FD
+
+  &__title
+    margin-bottom: 24px
+
+    &--mobile
+      display: none
+
+  &__content
+    margin-bottom: 24px
+
+  &__submit
+    width: 100%
+
+    &:not(:last-child)
+      margin-bottom: 16px
+
+.payment-row
+  display: flex
+  gap: 48px
+
+  &__text
+    font-weight: 400
+    font-size: 14px
+    line-height: 130%
+    color: #868686
+    max-width: 121px
+    width: 100%
+
+  &__title
+    font-weight: 600
+    font-size: 14px
+    line-height: 130%
+    text-align: center
+    color: $black
+
+  &--red
+    color: $red
+
+.object-form__cover
+  display: flex
+  gap: 24px
+
+.payment-content__item:not(:last-child)
+  margin-bottom: 8px
+
+.custom-select
+  position: relative
+  background: #f7f7f7
+  border: 1px solid #eeeeee
+  border-radius: 2px
+  box-shadow: none
+  color: #383838
+  height: auto
+  font-size: 13px
+  outline: none
+  width: 100%
+
+  &__header
+    cursor: pointer
+    display: flex
+    color: #868686
+    justify-content: space-between
+    align-items: center
+    padding: 11px 14px
+
+  &__current
+    font-weight: 400
+    font-size: 14px
+    line-height: 130%
+
+  &__icon
+    height: 6px
+    width: 12px
+    transition: .2s ease
+
+    &--active
+      transform: rotate(180deg)
+
+  &__body
+    border-top: 0
+    display: none
+    left: 0
+    position: absolute
+    right: 0
+    top: 100%
+    background: #FFFFFF
+    box-shadow: 0px 4px 8px rgba(51, 51, 51, 0.2)
+    border-radius: 5px
+
+  &__item
+    cursor: pointer
+    padding: 8px
+    color: #868686
+    font-weight: 400
+    font-size: 14px
+    line-height: 130%
+
+    &:hover
+      background-color: #F8F8F8
+
+    &--active
+      font-weight: 600
+      font-size: 14px
+      line-height: 130%
+      color: $black
+
+  &__text
+    font-weight: 400
+    font-size: 14px
+    line-height: 130%
+    color: $black
+
+  &__item-add
+    display: flex
+    gap: 10px
+    align-items: center
+    padding: 0 8px 8px
+    text-decoration: none
+
+.custom-select__value
+  display: none
+
+.custom-select.is-active .custom-select__body
+  display: block
+
+.object-checkbox__text
+  width: 125px
+
+.error-text
+  display: none
+  font-weight: 400
+  font-size: 12px
+  line-height: 16px
+  color: $red
+
+  &--active
+    display: flex
+
+.active
+  opacity: 0
+  pointer-events: none
+
+@media ( max-width: 1024px )
+  .payment-section
+    position: inherit
+    max-width: unset
+
+  .wrapper
+    flex-direction: column
+    gap: 35px
+
+    &__column
+      order: 2
+      margin: 0 auto
+
+      &--small
+        order: 1
+        max-width: 668px
+
+  .payment-row
+    justify-content: space-between
+
+@media ( max-width: 768px )
+  .checkbox-section
+    &--column
+      flex-direction: column
+
+  .title
+    font-size: 20px
+
+    &--small
+      width: 100%
+      font-size: 16px
+
+  .wrapper
+
+    &__column
+
+      &--small
+        order: 1
+
+  .page__form
+    margin: 75px auto
+
+  .img
+    display: none
+
+    &--mobile
+      display: flex
+
+  .inputs-block
+    &__title
+      display: flex
+      align-items: center
+      gap: 16px
+
+    &__title-cover
+      flex-direction: column
+      align-items: start
+
+  .order-form__item
+    margin-bottom: 24px
+
+  .object-checkbox--column
+    flex-direction: column
+
+@media ( max-width: 500px )
+  .title
+    display: flex
+    align-items: center
+    font-size: 20px
+
+    &--middle
+      font-size: 16px
+
+  .page__form
+    margin: 15px auto
+
+  .object-form__cover
+    flex-direction: column
+    gap: 12px
+
+    .custom-input
+      order: 2
+      max-width: unset
+
+    .custom-checkbox
+      order: 1
+
+  .order-form__item--mobile
+    flex-direction: column
+
+  .payment-section
+    &__buttons
+      display: none
+
+    &__buttons-mobile
+      display: flex
+      flex-direction: column
+
+    &__row
+      margin-bottom: 0
+
+  .custom-imput
+    &__wrapper
+      flex-direction: column

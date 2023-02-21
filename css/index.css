@@ -268,7 +268,7 @@ input[type=text]:disabled {
 .custom-checkbox:checked + label::before {
   border-color: #FFD800;
   background-color: #FFD800;
-  background-image: url("./images/checked.svg");
+  background-image: url("../images/checked.svg");
 }
 
 .order-section {
