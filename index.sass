@@ -2,6 +2,11 @@
   font-family: 'Manrope', sans-serif
   box-sizing: border-box
 
+$black: #333333
+$grey: #cccccc
+$yellow: #FFD800
+$red: #FF2323
+
 body
   margin: 0
 
@@ -94,7 +99,7 @@ input[type="text"]:disabled
   font-weight: 800
   font-size: 24px
   line-height: 130%
-  color: #333333
+  color: $black
   display: flex
 
   &--middle
@@ -104,19 +109,19 @@ input[type="text"]:disabled
     font-weight: 700
     font-size: 16px
     line-height: 130%
-    color: #333333
+    color: $black
 
   &__text
     font-weight: 400
     font-size: 14px
     line-height: 130%
-    color: #333333
+    color: $black
 
   &__span
     font-weight: 600
     font-size: 14px
     line-height: 130%
-    color: #333333
+    color: $black
     margin-left: 4px
 
 .inputs-block
@@ -147,8 +152,8 @@ input[type="text"]:disabled
   text-decoration: none
 
 .button-main
-  color: #333333
-  background: #FFD800
+  color: $black
+  background: $yellow
   border: none
   padding: 11px 24px
   border-radius: 5px
@@ -159,16 +164,15 @@ input[type="text"]:disabled
 
   &--white
     background: white
-    border: 1.5px solid #FFD800
+    border: 1.5px solid $yellow
 
   &:hover
-    color: #333333
+    color: $black
     background: #F1C400
 
   &[disabled]
-    background-color: #cccccc
+    background-color: $grey
     cursor: not-allowed
-
 
 .custom-imput
   display: flex
@@ -195,7 +199,7 @@ input[type="text"]:disabled
     font-weight: 400
     font-size: 12px
     line-height: 16px
-    color: #333333
+    color: $black
 
 .main-text
   font-weight: 400
@@ -247,8 +251,8 @@ input[type="text"]:disabled
     background-position: center center
 
   &:checked+label::before
-    border-color: #FFD800
-    background-color: #FFD800
+    border-color: $yellow
+    background-color: $yellow
     background-image: url("./images/checked.svg")
 
 .order-section
@@ -297,9 +301,7 @@ input[type="text"]:disabled
 .section-checkbox
   display: flex
   flex-direction: column
-
-  &__item:not(:last-child)
-    margin-bottom: 24px
+  gap: 24px
 
 .checkbox-wrapper
   display: flex
@@ -331,7 +333,7 @@ input[type="text"]:disabled
 
   & label input:checked~span
     background-color: white
-    border: 1px solid #333333
+    border: 1px solid $black
 
   & span:after
     content: ""
@@ -347,7 +349,7 @@ input[type="text"]:disabled
     width: 12px
     height: 12px
     border-radius: 50%
-    background: #333333
+    background: $black
 
 .radio-section
   max-width: 334px
@@ -374,7 +376,7 @@ input[type="text"]:disabled
     width: 100%
 
 .input-error
-  border: 1.5px solid #FF2323
+  border: 1.5px solid $red
   background-image: url("./images/input-error.png")
   background-repeat: no-repeat
   background-position: 99% center
@@ -382,6 +384,9 @@ input[type="text"]:disabled
 .payment-section
   position: fixed
   max-width: 271px
+
+  &__checkbox:not(:last-child)
+    margin-bottom: 24px
 
   &__buttons-mobile
     display: none
@@ -443,10 +448,10 @@ input[type="text"]:disabled
     font-size: 14px
     line-height: 130%
     text-align: center
-    color: #333333
+    color: $black
 
   &--red
-    color: #FF2323
+    color: $red
 
 .object-form__cover
   display: flex
@@ -514,13 +519,13 @@ input[type="text"]:disabled
       font-weight: 600
       font-size: 14px
       line-height: 130%
-      color: #333333
+      color: $black
 
   &__text
     font-weight: 400
     font-size: 14px
     line-height: 130%
-    color: #333333
+    color: $black
 
   &__item-add
     display: flex
@@ -543,7 +548,7 @@ input[type="text"]:disabled
   font-weight: 400
   font-size: 12px
   line-height: 16px
-  color: #FF2323
+  color: $red
 
   &--active
     display: flex

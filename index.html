@@ -58,11 +58,11 @@
                             <input disabled class="custom-input js-object-checkbox" type="text">
                         </div>
                         <div class="inputs-block__wrapper">
-                            <div class="form-block__item custom-imput">
+                            <div class="custom-imput">
                                 <div class="custom-imput__title">Подъезд</div>
                                 <input type="text" class="custom-input custom-input--small">
                             </div>
-                            <div class="form-block__item custom-imput">
+                            <div class="custom-imput">
                                 <div class="custom-imput__title">Этаж</div>
                                 <input type="text" class="custom-input custom-input--small">
                             </div>
@@ -221,9 +221,9 @@
 
             </form>
             <div class="payment-section__buttons-mobile js-section-mobile js-checkbox-input">
-                <input type="checkbox" class="custom-checkbox js-open-checkbox" id="personal-date"
+                <input type="checkbox" class="custom-checkbox js-open-checkbox" id="order-pay-mobile"
                     value="personal-date">
-                <label class="section-checkbox__item" for="personal-date">
+                <label class="payment-section__checkbox" for="order-pay-mobile">
                     <span class="main-text">Я согласен на <a class="text-link" href="#">обработку
                             персональных данных</a></span>
                 </label>
@@ -260,9 +260,9 @@
                     <div class="title title--middle">2 748 руб.</div>
                 </div>
                 <div class="payment-section__buttons js-checkbox-input">
-                    <input type="checkbox" class="custom-checkbox js-open-checkbox" id="personal-date"
+                    <input type="checkbox" class="custom-checkbox js-open-checkbox" id="order-pay"
                         value="personal-date">
-                    <label class="section-checkbox__item" for="personal-date">
+                    <label class="payment-section__checkbox" for="order-pay">
                         <span class="main-text">Я согласен на <a class="text-link" href="#">обработку
                                 персональных данных</a></span>
                     </label>
@@ -277,10 +277,14 @@
     </div>
 
 
-    <script src="index.js"></script>
-    <script src="phone-mask.js"></script>
-    <script src="js/handlers/CusomSelect.js"></script>
-    <script src="js/init.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="js/phone-mask.js"></script>
+    <script src="js/CusomSelect.js"></script>
+    <script src="js/ValidataonForm.js"></script>
+    <script src="js/hideBlockForMobile.js"></script>
+    <script src="js/DisableObjectsController.js"></script>
+    <script src="js/formSubmit.js"></script>
 </body>
 
 </html>

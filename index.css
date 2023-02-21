@@ -321,9 +321,7 @@ input[type=text]:disabled {
 .section-checkbox {
   display: flex;
   flex-direction: column;
-}
-.section-checkbox__item:not(:last-child) {
-  margin-bottom: 24px;
+  gap: 24px;
 }
 
 .checkbox-wrapper {
@@ -414,6 +412,9 @@ input[type=text]:disabled {
 .payment-section {
   position: fixed;
   max-width: 271px;
+}
+.payment-section__checkbox:not(:last-child) {
+  margin-bottom: 24px;
 }
 .payment-section__buttons-mobile {
   display: none;
