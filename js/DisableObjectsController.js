@@ -1,4 +1,4 @@
-class DisableObjectsController {
+export default class DisableObjectsController {
     constructor(wrapper) {
         this.wrapper = wrapper
         this.controlCheckbox = this.wrapper.querySelector('.js-open-checkbox')
@@ -16,6 +16,3 @@ class DisableObjectsController {
         this.disableTarget.value = ''
     }
 }
-
-document.querySelectorAll('.js-checkbox-input').forEach(
-    item => new DisableObjectsController(item))

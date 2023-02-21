@@ -1,7 +1,7 @@
-const validationInputArr = []
+
 
 // валидация формы
-class ValidationForm {
+export default class ValidationForm {
     constructor(wrapper) {
         this.input = wrapper.querySelector('.js-check-empty')
         this.errorTextElem = wrapper.querySelector('.error-text')
@@ -55,6 +55,3 @@ class ValidationForm {
         }
     }
 }
-
-document.querySelectorAll('.js-validation-input').forEach(
-    item => validationInputArr.push(new ValidationForm(item)))

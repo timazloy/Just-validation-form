@@ -1,4 +1,4 @@
-function maskPhone(event) {
+export default function maskPhone(event) {
     let keyCode
 
     event.keyCode && (keyCode = event.keyCode)
@@ -39,9 +39,3 @@ function maskPhone(event) {
 
     if (event.type === 'focusout' && this.value.length < 18) this.value = ''
 }
-
-$(document)
-    .on('input', '.js-input-phone', maskPhone)
-    .on('focus', '.js-input-phone', maskPhone)
-    .on('blur', '.js-input-phone', maskPhone)
-    .on('keydown', '.js-input-phone', maskPhone)

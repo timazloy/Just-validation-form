@@ -1,4 +1,4 @@
-class CustomSelect {
+export default class CustomSelect {
     constructor(wrapper) {
         this.wrapper = wrapper
         this.selectHeader = this.wrapper.querySelector('.custom-select__header')
@@ -41,6 +41,3 @@ class CustomSelect {
         });
     }
 }
-
-document.querySelectorAll('.js-custom-select').forEach(
-    item => new CustomSelect(item))
